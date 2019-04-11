@@ -45,7 +45,7 @@ static RK_S32 jpegd_find_marker(const RK_U8 **pbuf_ptr, const RK_U8 *buf_end)
             val = *buf_ptr++;
             goto found;
         } else if ((v == 0x89) && (v2 == 0x50)) {
-            mpp_log("input img maybe png format,check it\n");
+            /* mpp_log("input img maybe png format,check it\n"); */
         }
         skipped++;
     }
@@ -1395,5 +1395,3 @@ const ParserApi api_jpegd_parser = {
     .control = jpegd_control,
     .callback = jpegd_callback,
 };
-
-
