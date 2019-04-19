@@ -462,7 +462,7 @@ MPP_RET mpp_create(MppCtx *ctx, MppApi **mpi)
         *mpi = p->api;
     } while (0);
 
-    mpp_log("mpp version: %s\n", mpp_info_get(INFO_ALL));
+    // mpp_log("mpp version: %s\n", mpp_info_get(INFO_ALL));
 
     mpi_dbg_func("leave ret %d ctx %p mpi %p\n", ret, *ctx, *mpi);
     return ret;
@@ -546,4 +546,3 @@ void mpp_show_support_format()
                 info->coding_name, info->coding);
     }
 }
-
